@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPT 8</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font: normal 20pt Arial;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    
+
+
+    <script>
+        var MP = Number(window.prompt('Digite a Nota da prova: '))
+        var MT = Number(window.prompt('Digite a nota do Trabalho: '))
+        var ME = Number(window.prompt('Digite a nota do exercicio: '))
+
+        var MF = (0.7 * MP) + (0.2 * MT) + (0.1 * ME)
+        
+        document.write(`A media final é de: ${Number(MF.toFixed(2))}`)
+
+
+    </script>
+</body>
+</html>

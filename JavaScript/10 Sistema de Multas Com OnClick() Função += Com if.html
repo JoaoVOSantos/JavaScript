@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11 ex 10</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: grey;
+            display: flex;
+            justify-content: center;
+            font: normal 10pt arial;
+        }
+        .container{
+            background-color: lightgray;
+            display: flex;
+            flex-direction: column;
+            padding: 45px;
+            border-radius: 10px;
+            margin-top: 10%;
+            gap: 10px;
+        }
+        #vel{
+            border-radius: 5px;
+            height: 20px;
+            border: none;
+        }
+        #botao{
+            margin-left: 25%;
+            margin-right: 25%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: lightgreen;
+            color: black;
+        
+        }
+        #botao:hover{
+            cursor: pointer;
+            background-color: green;
+            color: white;
+        }
+    </style>
+
+    <div class="container">
+        <h1> Sistemas de Multas </h1>
+        Velocidade do Carro: 
+        KM/h <input type="number" name="txtvel" id="vel"> 
+        <input type="button" value="Verificar" id="botao" onclick="calcular()">
+        <div id="res"> </div>
+    </div>
+    <script>
+        function calcular(){
+            var v = document.getElementById('vel')
+            var r = document.getElementById('res')
+            var vel = Number(v.value)
+
+            r.innerHTML = `<p> Sua velocidade é de <strong> ${vel} </strong> KM/h <p>`
+            if(vel > 0 || vel <= 60){
+                r.innerHTML += `<p> Não esta multado </p>`
+            }
+            else if(vel > 60){
+
+                r.innerHTML += `<p> vc esta multado </p>`
+
+            }
+            
+                r.innerHTML += `<p> Dirija com Cinto de Segurança </p>`
+        }
+
+
+    </script>
+</body>
+</html>

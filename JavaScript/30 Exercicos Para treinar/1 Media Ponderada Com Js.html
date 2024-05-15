@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="bt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPT 1</title>
+
+    <style>
+        body{
+
+            font: normal 20pt Arial;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        var nota1 = Number(window.prompt('Digite a primeira nota: '))
+        var pesoN1 = Number(window.prompt('Digite o peso da primeira nota: '))
+
+        var nota2 = Number(window.prompt('Digite o segundo nota: '))
+        var pesoN2 = Number(window.prompt('Digite o peso da segunda nota: '))
+
+        var nota3 = Number(window.prompt('Digite a terceira nota: '))
+        var pesoN3 = Number(window.prompt('Digite o peso da terceira nota: '))
+
+        var resultado = ((nota1 * pesoN1) + (nota2 * pesoN2) + (nota3 * pesoN3)) / (pesoN1 + pesoN2 + pesoN3)
+
+        document.write(`A média ponderada das 3 notas e seus pesos é de ${Number(resultado.toFixed(2))}`)
+    </script>
+    
+</body>
+</html>

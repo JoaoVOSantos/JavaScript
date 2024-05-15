@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Numeros</title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            color: white;
+            font: normal 20pt Arial;
+        }
+        #divConta{
+            display: flex;
+            flex-direction: column;
+            border-radius: 10%;
+            text-align: center;
+            height: auto;
+            width: 400px;
+            background-color: rgb(49, 67, 62);
+            padding: 10px;
+            margin-top: 10%;
+        }
+        #n1{
+
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+        #n2 {
+            
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+        strong{
+            color: red;
+        }
+        h1{
+           color: rgb(255, 255, 255);
+        }
+        input{
+            border-radius: 10px;
+            border: none;
+            height: 25px;
+            text-align: center;
+        }
+        #botao{
+            margin-top: 10px;
+            height: auto;
+            margin-left: 40%;
+            margin-right: 40%;
+            border-radius: 10px;
+            border: none;
+            height: 40px;
+            color: white;
+            background-color: green;
+            margin-bottom: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="divConta">
+        <h1> Somando Valores </h1>
+        <input type="number" name="numero1" id="n1"> 
+        + 
+        <input type="number" name="numero2" id="n2"> 
+        <input type="button" id="botao" value="Somar" onclick="somar()"> 
+        <div class="resultado"> Resultado é: </div>
+    </div>
+
+    <script>
+        function somar(){
+            var tn1 = Number(window.document.getElementById('n1').value)
+            var tn2 = window.document.querySelector('input#n2')
+            var r = window.document.querySelectorAll('div.resultado')[0]
+
+         // var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+
+            var re = tn1 + n2
+
+            r.innerHTML = `A soma entre ${tn1} + ${n2} = <strong> ${re} </strong>`
+        }
+
+    </script>
+
+
+</body>
+</html>

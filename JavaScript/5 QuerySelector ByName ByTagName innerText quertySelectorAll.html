@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aula 9 ex 5</title>
+
+    <style>
+        body{
+            color: white;
+            background-color: black;
+            font: normal 18pt Arial;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1> Iniciando estudos Com DOM </h1>
+
+    <p> Aqui vai o resultado </p>
+    <p> Aprendendo a usar <strong> DOM </strong> em javaScript</p>
+    <p> Pegando por Tag ou Marca Com Array </p>
+
+    <div id="id1"> Pegando por ID </div>
+    <div name="name1"> Pegando por Nome </div>
+    <div class="class1"> pegando por Class </div>
+
+    <div class="Seletor1"> P1 </div>
+    <div id="Seletor2"> P2 </div>
+
+    <script>
+
+        document.write(`<p>`)
+
+        // por Tag ou marca
+        var p1 = window.document.getElementsByTagName('p')[2] // [1] seleciona outro paragrafo
+        window.document.write(`Esta escrito assim no terceiro P: ${p1.innerText} <br>`) // mostra a msg recebida em p1.
+
+        // por ID
+
+        var div = window.document.getElementById('id1') // ById Busca por id o nome do id que desejar.
+        window.document.write(`Esta escrito na div com ID: ${id1.innerText} <br>`) // mostra a msg recebida em div.
+
+       // por nome
+
+        var nome = window.document.getElementsByName('name1')[0] // ByName Busca por nome e o Array [0] seleciona o primeiro, caso exista mais de 1 name1
+        window.document.write(`Esta escrito na div com Nome: ${nome.innerText} <br>`) // Escreve e Mostra a msg dentro da variavel nome.
+
+       // por Class
+
+        var classe = window.document.getElementsByClassName('class1')[0] // ByClassName busca pela class do elemento.
+        window.document.write(`Esta escrito na div com Class: ${classe.innerText} <br> `) // Escreve e Mostra a msg dentro da variavel classe.
+
+       // por seletor (Class ou Id)
+
+        var seletor = window.document.querySelector('div.Seletor1') //com querySelector tem que especificar a tag o Seletor e o Nome do Seletor.
+        window.document.write(`Esta escrito na div com class e pegando por query selector: ${seletor.innerText} <br>`)
+        
+        var seletor2 = window.document.querySelectorAll('div#Seletor2')[0] // com querySelectorAll tem que especificar a tag o Seletor e o Nome do Seletor e podendo adicionar um array para pegar 1 em 1 especifico.
+        window.document.write(`Esta escrito na div com id e pegando por query selector: ${seletor2.innerText}`)
+    </script>
+</body>
+</html>

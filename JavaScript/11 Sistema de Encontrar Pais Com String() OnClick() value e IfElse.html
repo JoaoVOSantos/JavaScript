@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            background-color: rgb(37, 155, 165);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            display:flex;
+            flex-direction: column;
+            background-color: chocolate;
+            padding: 20px;
+            border-radius: 5px;
+            height: auto;
+        }
+        #txtPais{
+            margin-bottom: 10px;
+           border-radius: 5px;
+           border:none;
+           height: 20px;
+           text-align: center;
+        }
+        .botao{
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 10px;
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+        #res{
+            color: white;
+        }
+
+
+    </style>
+    <title>Aula 11 ex 11</title>
+</head>
+<body>
+    <div class="container">
+        <h1> Digite Seu país. </h1>
+        <input type="text" name="txtPais" id="txtPais">
+        <input type="button" class="botao" value="Mostrar" onclick="mostrar()">
+        <div id="res"></div>
+    </div>
+    <script>
+        function mostrar(){
+            var p = window.document.querySelector('input#txtPais')
+            var r = window.document.querySelector('div#res')
+
+            var pais = String(p.value).toUpperCase()
+            
+            if(pais == 'BRASIL'){
+
+                r.innerHTML = `Mora em: ${String(pais)} <br>`
+                r.innerHTML += `Vc é brasileiro`
+
+            }else{
+                
+                r.innerHTML = `Mora em: ${String(pais)} <br>`
+                r.innerHTML += `Vc é gringo`
+
+            }
+            
+        }  
+    </script>
+</body>
+</html>
