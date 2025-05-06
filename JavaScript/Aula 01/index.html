@@ -39,12 +39,12 @@
         var nome = window.prompt('Qual seu nome?') // quarda o valor digitado em uma variavel
         window.alert("Seu Nome é: " + nome) // concatenação de variaveis
 
-        // document.querySelector(''); - para selecionar um elemento
-        // document.getElementById('id-do-elemento'); - para selecionar um elemento pelo id
-        // document.getElementByClassName('classe-do-elemento'); - para selecionar um elemento pelo nome da classe
+        // document.querySelector(''); - para selecionar qualquer elemento, (# . <>)
+        // document.getElementById('id-do-elemento'); - para selecionar um elemento pelo id (#)
+        // document.getElementByClassName('classe-do-elemento'); - para selecionar um elemento pelo nome da classe (.)
 
         p = document.querySelector('#p')
-        p.innerHTML = "oi " + nome // altera o conteudo do elemento p selecionado pela linha 45.
+        p.innerHTML = "oi " + nome // innerHTML altera excluindo tudo o conteudo do elemento p.
 
     </script>
 </body>
